@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_records"
+    tools:context="com.example.user.lab2_game.RecordsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/records_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#555555">
+
+            <TextView
+                android:id="@+id/th1"
+                android:layout_width="110dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="left"
+                android:text="Имя"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/th2"
+                android:layout_width="125dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/th1"
+                android:layout_toRightOf="@+id/th1"
+                android:gravity="center"
+                android:text="Результат"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/th3"
+                android:layout_width="120dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/th2"
+                android:layout_toRightOf="@+id/th2"
+                android:gravity="center"
+                android:text="Дата"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_records"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ScrollView
+                android:id="@+id/ScrollView11"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/records_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="0,1" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/records_footer"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorSerenity">
+
+            <Button
+                android:id="@+id/buttonRemoveAllRecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="25dp"
+                android:text="Удалить все записи" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
